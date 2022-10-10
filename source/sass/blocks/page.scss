@@ -1,8 +1,11 @@
 .page {
-    height: 100%;
-  }
-  
-  .page__body {
-    min-height: 100%;
-    margin: 0;
-  }
+  height: 100%;
+  font-family: $main-font;
+}
+
+.page__body {
+  min-height: 100%;
+  margin: 0;
+  background-color: $bg-color-main;
+  color: $text-color-second;
+}

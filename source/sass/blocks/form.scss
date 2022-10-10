@@ -1,0 +1,22 @@
+.form__fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: $tablet-width) {
+  .form__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__container {
+    display: flex;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__container {
+    flex-direction: column;
+  }
+}

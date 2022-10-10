@@ -1,0 +1,14 @@
+.copyright {
+  text-align: center;
+}
+
+.copyright__link {
+  color: $text-color-transparent;
+  text-decoration: none;
+
+  @include text-size(400, 12px, 16px);
+}
+
+.copyright__icon {
+  vertical-align: middle;
+}
