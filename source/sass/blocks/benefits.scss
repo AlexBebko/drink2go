@@ -2,9 +2,22 @@
   width: 320px;
   margin: 0 auto;
   text-align: center;
+  padding: 50px 20px 60px 20px;
+}
+
+.benefits__badge {
+  margin-bottom: 4px;
+}
+
+.benefits__title {
+  margin: 0;
+  margin-bottom: 36px;
+
+  @include text-size(700, 24px, 36px);
 }
 
 .benefits__list {
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -12,21 +25,37 @@
 @media (min-width: $tablet-width) {
   .benefits__wrapper {
     width: 768px;
+    padding-top: 60px;
+    padding-bottom: 100px;
     text-align: center;
   }
 
+  .benefits__title {
+    margin-bottom: 60px;
+
+    @include text-size(700, 42px, 64px);
+  }
+
   .benefits__list {
+    margin-left: 10px;
+    margin-right: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 50px 30px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .benefits__wrapper {
     width: 1440px;
+    padding: 100px 40px 120px 40px;
   }
 
   .benefits__list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .benefits__title {
+    margin-bottom: 80px;
   }
 }

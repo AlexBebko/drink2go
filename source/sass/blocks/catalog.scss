@@ -6,6 +6,21 @@
 .catalog__wrapper {
   width: 320px;
   margin: 0 auto;
+  padding: 50px 20px 44px 20px;
+}
+
+.catalog__badge {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4px;
+}
+
+.catalog__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+
+  @include text-size(700, 24px, 36px);
 }
 
 .catalog__list {

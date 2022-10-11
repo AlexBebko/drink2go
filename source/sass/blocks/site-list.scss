@@ -1,5 +1,5 @@
 .site-list {
-  display: block;
+  display: none;
   position: absolute;
   background-color: $bg-color-main;
   top: 60px;
@@ -17,7 +17,7 @@
   width: 320px;
   text-decoration: none;
   text-transform: uppercase;
-  color: $text-color-second;
+  color: $text-color-main;
   padding-top: 20px;
   padding-bottom: 21px;
 

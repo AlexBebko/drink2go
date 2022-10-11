@@ -1,0 +1,96 @@
+.benefit {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 32px;
+  padding-top: 66px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    transform: translate(-50%, 0);
+    top: 0;
+    left: 50%;
+    width: 52px;
+    height: 56px;
+  }
+
+  &--speed {
+    &::before {
+      background-image: url("../img/speed-icon.svg");
+    }
+  }
+
+  &--convenience {
+    &::before {
+      background-image: url("../img/pocket-icon.svg");
+    }
+  }
+
+  &--cheerfulness {
+    &::before {
+      width: 42px;
+      background-image: url("../img/lighting-icon.svg");
+    }
+  }
+
+  &--eco {
+    &::before {
+      background-image: url("../img/leaf-icon.svg");
+    }
+  }
+}
+
+.benefit__title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 4px;
+
+  @include text-size(700, 18px, 32px);
+}
+
+.benefit__description {
+  padding: 0;
+  margin: 0;
+
+  @include text-size(400, 14px, 20px);
+}
+
+@media (min-width: $tablet-width) {
+  .benefit {
+    padding-top: 0;
+    padding-left: 72px;
+    text-align: start;
+    margin-bottom: 0;
+
+    &::before {
+      transform: translate(0, 0);
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .benefit__title {
+    margin-bottom: 10px;
+
+    @include text-size(700, 24px, 36px);
+  }
+
+  .benefit__description {
+    @include text-size(400, 16px, 24px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .benefit {
+    padding: 0;
+    padding-top: 76px;
+    text-align: center;
+
+    &::before {
+      transform: translate(-50%, 0);
+      top: 0;
+      left: 50%;
+    }
+  }
+}

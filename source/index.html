@@ -79,13 +79,15 @@
               <p class="slide__description">
                 Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
               </p>
-              <span class="slide__old-price">
-                295₽
-              </span>
-              <span class="slide__new-price">
-                225₽
-              </span>
-              <a class="slide__button button button--primary" href="#">Заказать</a>
+              <div class="slide__button-wrapper">
+                <span class="slide__old-price">
+                  295₽
+                </span>
+                <span class="slide__new-price">
+                  225₽
+                </span>
+                <a class="slide__button button button--primary" href="#">Заказать</a>
+              </div>
             </li>
             <li class="slider__item slide slide--lavender">
               <p class="slide__badge badge">
@@ -142,7 +144,7 @@
             Главные причины выбрать Drink2Go
           </p>
           <ul class="benefits__list">
-            <li class="benefits__item benefit">
+            <li class="benefits__item benefit benefit--speed">
               <h3 class="benefit__title">
                 Скорость
               </h3>
@@ -150,15 +152,15 @@
                 Готовый напиток всегда под рукой — просто открой банку
               </p>
             </li>
-            <li class="benefits__item benefit">
+            <li class="benefits__item benefit benefit--convenience">
               <h3 class="benefit__title">
                 Удобство
               </h3>
               <p class="benefit__description">
-                Легко помещается и в карман, и в маленькую сумочку
+                Легко помещается и в карман, и&nbsp;в&nbsp;маленькую сумочку
               </p>
             </li>
-            <li class="benefits__item benefit">
+            <li class="benefits__item benefit benefit--cheerfulness">
               <h3 class="benefit__title">
                 Бодрость
               </h3>
@@ -166,12 +168,12 @@
                 Сбалансированная доза кофеина даст мощный заряд энергии
               </p>
             </li>
-            <li class="benefits__item benefit">
+            <li class="benefits__item benefit benefit--eco">
               <h3 class="benefit__title">
                 Экологичность
               </h3>
               <p class="benefit__description">
-                Вся упаковка сделана из перерабатываемых материалов
+                Вся упаковка сделана из&nbsp;перерабатываемых материалов
               </p>
             </li>
           </ul>
@@ -189,29 +191,27 @@
             <form class="catalog__form form" action="https://echo.htmlacademy.ru/" method="get" >
               <div class="form__wrapper">
                 <div class="form__container">
-                  <fieldset class="form__fieldset">
+                  <fieldset class="form__fieldset form__fildset--price">
                     <legend class="form__legend">
                       Цена
                     </legend>
-                    <div class="form__range">
-                      <div class="form__range-scale">
-                        <div class="form__range-bar">
-                          <button class="form__range-toggle form__toggle-min" type="button">
-                            <span class="visually-hidden">Изменить минимальную цену.</span>
-                          </button>
-                          <button class="form__range-toggle form__toggle-max" type="button">
-                            <span class="visually-hidden">Изменить максимальную цену.</span>
-                          </button>
+                    <div class="form__range range">
+                      <div class="range__container">
+                        <div class="range__scale">
+                          <div class="range__bar">
+                            <button class="range__toggle range__toggle--min" type="button">
+                              <span class="visually-hidden">Изменить минимальную цену.</span>
+                            </button>
+                            <button class="range__toggle range__toggle--max" type="button">
+                              <span class="visually-hidden">Изменить максимальную цену.</span>
+                            </button>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="form__input-container">
-                      <div class="form__input-from">
-                        <input class="form__input-range" type="number" value="0" name="min-price">
-                      </div>
-                      <span class="form__input-dash">-</span>
-                      <div class="form__input-till">
-                        <input class="form__input-range" type="number" value="900" name="max-price">
+                      <div class="range__input-container">
+                        <input class="range__input-data" type="number" value="0" min="0" name="min-price">
+                        <span class="range__input-dash"></span>
+                        <input class="range__input-data" type="number" value="900" max="1000" name="max-price">
                       </div>
                     </div>
                   </fieldset>
@@ -220,23 +220,23 @@
                       Наличие молока
                     </legend>
                     <div class="form__fieldset-wrapper">
-                      <label class="form__field">
-                        <input class="visually-hidden" type="radio" name="milk-presence" value="no-matter">
+                      <label class="form__field form__field--radio">
+                        <input class="form__radio visually-hidden" type="radio" name="milk-presence" value="no-matter" checked>
                         <span class="form__mark form__mark--radio"></span>
                         <span class="form__label">Неважно</span>
                       </label>
-                      <label class="form__field">
-                        <input class="visually-hidden" type="radio" name="milk-presence" value="animal-milk">
+                      <label class="form__field form__field--radio">
+                        <input class="form__radio visually-hidden" type="radio" name="milk-presence" value="animal-milk">
                         <span class="form__mark form__mark--radio"></span>
                         <span class="form__label">Только животное</span>
                       </label>
-                      <label class="form__field">
-                        <input class="visually-hidden" type="radio" name="milk-presence" value="vegetable-milk">
+                      <label class="form__field form__field--radio">
+                        <input class="form__radio visually-hidden" type="radio" name="milk-presence" value="vegetable-milk">
                         <span class="form__mark form__mark--radio"></span>
                         <span class="form__label">Только растительное</span>
                       </label>
-                      <label class="form__field">
-                        <input class="visually-hidden" type="radio" name="milk-presence" value="none" disabled>
+                      <label class="form__field form__field--radio">
+                        <input class="form__radio visually-hidden" type="radio" name="milk-presence" value="none" disabled>
                         <span class="form__mark form__mark--radio"></span>
                         <span class="form__label">Без молока</span>
                       </label>
@@ -247,30 +247,30 @@
                       Страна произрастания
                     </legend>
                     <div class="form__fieldset-wrapper">
-                      <label class="form__field">
-                        <input class="visually-hidden" type="checkbox" name="Brazil" checked>
+                      <label class="form__field form__field--check">
+                        <input class="form__check visually-hidden" type="checkbox" name="Brazil" checked>
                         <span class="form__mark form__mark--check"></span>
-                        <span class="form__label">Бразилия</span>
+                        <span class="form__label form__label--check">Бразилия</span>
                       </label>
-                      <label class="form__field">
-                        <input class="visually-hidden" type="checkbox" name="Ethiopia">
+                      <label class="form__field form__field--check">
+                        <input class="form__check visually-hidden" type="checkbox" name="Ethiopia">
                         <span class="form__mark form__mark--check"></span>
-                        <span class="form__label">Эфиопия</span>
+                        <span class="form__label form__label--check">Эфиопия</span>
                       </label>
-                      <label class="form__field">
-                        <input class="visually-hidden" type="checkbox" name="Columbia">
+                      <label class="form__field form__field--check">
+                        <input class="form__check visually-hidden" type="checkbox" name="Columbia">
                         <span class="form__mark form__mark--check"></span>
-                        <span class="form__label">Колумбия</span>
+                        <span class="form__label form__label--check">Колумбия</span>
                       </label>
-                      <label class="form__field">
-                        <input class="visually-hidden" type="checkbox" name="Costa-Rica">
+                      <label class="form__field form__field--check">
+                        <input class="form__check visually-hidden" type="checkbox" name="Costa-Rica">
                         <span class="form__mark form__mark--check"></span>
-                        <span class="form__label">Коста-Рика</span>
+                        <span class="form__label form__label--check">Коста-Рика</span>
                       </label>
-                      <label class="form__field">
-                        <input class="visually-hidden" type="checkbox" name="Peru" disabled>
+                      <label class="form__field form__field--check">
+                        <input class="form__check visually-hidden" type="checkbox" name="Peru" disabled>
                         <span class="form__mark form__mark--check"></span>
-                        <span class="form__label">Перу</span>
+                        <span class="form__label form__label--check">Перу</span>
                       </label>
                     </div>
                   </fieldset>
