@@ -39,6 +39,7 @@
 .range__toggle:hover,
 .range__toggle:focus,
 .range__toggle:focus-within {
+  cursor: pointer;
   outline: none;
 
   &::before,
@@ -71,6 +72,21 @@
   }
 }
 
+.range--disabled .range__bar {
+  background-color: $bg-color-range-bar-disabled;
+}
+
+.range--disabled .range__toggle {
+  border: 2px solid $bg-color-range-bar-disabled;
+  background-color: $bg-color-second;
+  cursor: text;
+
+  &::before,
+  &::after {
+    background-color: transparent;
+  }
+}
+
 
 .range__input-container {
   display: flex;
@@ -89,6 +105,24 @@
   @include text-size(500, 16px, 24px);
 }
 
+.range__input-data::placeholder {
+  color: #bdbdbd;
+}
+
+.range__input-data:hover,
+.range__input-data:focus,
+.range__input-data:focus-within {
+  outline: none;
+  border-color: #593cac;
+}
+
+.range--disabled .range__input-data,
+.range__input-data:disabled {
+  border-color: #e2e2e2;
+  background-color: $bg-color-second;
+  color: $text-color-transparent;
+}
+
 .range__input-dash {
   margin-left: 17px;
   margin-right: 17px;
@@ -98,12 +132,76 @@
   background-color: $text-color-transparent;
 }
 
+// input[type="number"] {
+//   -moz-appearance: textfield;
+// }
+
+// input::-webkit-outer-spin-button,
+// input::-webkit-inner-spin-button {
+//   -webkit-appearance: none;
+// }
+
 @media (min-width: $tablet-width) {
+  .range__container {
+    width: 240px;
+    padding-left: 15px;
+    padding-right: 21px;
+  }
+
   .range__scale {
     height: 2px;
   }
 
   .range__bar {
+    width: 177px;
     height: 4px;
+  }
+
+  .range__toggle {
+    &--max {
+      left: 164px;
+    }
+  }
+
+  .range__input-data {
+    width: 93px;
+  }
+
+  .range__input-dash {
+    width: 6.82px;
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .range__container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .range__scale {
+    width: 100%;
+    padding-left: 12px;
+  }
+
+  .range__bar {
+    width: 274px;
+  }
+
+  .range__toggle {
+    &--max {
+      left: 262px;
+    }
+  }
+
+  .range__input-data {
+    width: 134px;
+  }
+
+  .range__input-dash {
+    width: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }

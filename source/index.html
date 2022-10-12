@@ -195,6 +195,7 @@
                     <legend class="form__legend">
                       Цена
                     </legend>
+                    <!-- для блокировки рэндж добаить класс range--disabled-->
                     <div class="form__range range">
                       <div class="range__container">
                         <div class="range__scale">
@@ -276,15 +277,15 @@
                   </fieldset>
                 </div>
                 <div class="form__button-wrapper">
-                  <button class="form__button button button--primary" type="submit">Применить фильтр</button>
-                  <button class="form__button button button--secondary" type="reset">Сбросить фильтр</button>
+                  <button class="form__button form__button--submit button button--primary" type="submit">Применить фильтр</button>
+                  <button class="form__button form__button--reset button button--secondary" type="reset">Сбросить фильтр</button>
                 </div>
               </div>
             </form>
             <div class="catalog__container">
               <div class="catalog__sorting-container">
                 <label class="catalog__sorting-title" for="sorting-select">Сортировка:</label>
-                <select class="catalog__sorting-select" name="sorting-select" id="sorting-select">
+                <select class="catalog__sorting-select catalog__sorting-select--dropdown" name="sorting-select" id="sorting-select">
                   <option value="default">по умолчанию</option>
                   <option value="expensive">сначала дорогие</option>
                   <option value="cheap">сначала дешёвые</option>
@@ -300,7 +301,7 @@
                     </h3>
                   </a>
                   <p class="product-card__description">
-                    Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком
                   </p>
                   <div class="product-card__button-wrapper">
                     <p class="product-card__price">
@@ -319,7 +320,7 @@
                     </h3>
                   </a>
                   <p class="product-card__description">
-                    Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком
                   </p>
                   <div class="product-card__button-wrapper">
                     <p class="product-card__price">
@@ -338,7 +339,7 @@
                     </h3>
                   </a>
                   <p class="product-card__description">
-                    Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком
                   </p>
                   <div class="product-card__button-wrapper">
                     <p class="product-card__price">
@@ -357,7 +358,7 @@
                     </h3>
                   </a>
                   <p class="product-card__description">
-                    Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком
                   </p>
                   <div class="product-card__button-wrapper">
                     <p class="product-card__price">
@@ -376,7 +377,7 @@
                     </h3>
                   </a>
                   <p class="product-card__description">
-                    Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком
                   </p>
                   <div class="product-card__button-wrapper">
                     <p class="product-card__price">
@@ -395,7 +396,7 @@
                     </h3>
                   </a>
                   <p class="product-card__description">
-                    Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком
                   </p>
                   <div class="product-card__button-wrapper">
                     <p class="product-card__price">
@@ -408,32 +409,32 @@
                 </li>
               </ul>
 
-              <div class="catalog__pagination">
-                <ul class="catalog__pagination-list pagination">
+              <div class="catalog__pagination pagination">
+                <ul class="pagination__list">
                   <li class="pagination__item">
-                    <a class="pagination__button button button--secondary" href="">
-                      <span class="pagination__button-back">Назад</span>
-                    </a>
+                    <button class="pagination__button pagination__button--back button button--secondary" href="">
+                      <span class="pagination__button--text">Назад</span>
+                    </button>
                   </li>
                   <li class="pagination__item">
-                    <a class="pagination__button button button--secondary" href="">
+                    <button class="pagination__button button button--secondary" href="">
                       1
-                    </a>
+                    </button>
                   </li>
                   <li class="pagination__item">
-                    <a class="pagination__button pagination__button--active button button--secondary" href="">
+                    <button class="pagination__button pagination__button--active button button--secondary" href="">
                       2
-                    </a>
+                    </button>
                   </li>
                   <li class="pagination__item">
-                    <a class="pagination__button button button--secondary" href="">
+                    <button class="pagination__button button button--secondary" href="">
                       3
-                    </a>
+                    </button>
                   </li>
                   <li class="pagination__item">
-                    <a class="pagination__button button button--secondary" href="">
-                      <span class="pagination__button-forward">Вперед</span>
-                    </a>
+                    <button class="pagination__button pagination__button--forward button button--secondary" href="">
+                      <span class="pagination__button--text">Вперед</span>
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -484,56 +485,56 @@
           </div>
           <div class="main-footer__nav-wrapper">
             <div class="main-footer__nav footer-site">
-              <p class="footer-site__badge badge">
+              <p class="main-footer__nav-badge footer-site__badge badge">
                 Интернет-магазин
               </p>
-              <ul class="footer-site__list">
-                <li class="footer-site__item">
-                  <a class="footer-site__link" href="#">
+              <ul class=" main-footer__nav-list footer-site__list">
+                <li class="main-footer__nav-item footer-site__item">
+                  <a class="main-footer__nav-link footer-site__link" href="#">
                     Каталог
                   </a>
                 </li>
-                <li class="footer-site__item">
-                  <a class="footer-site__link" href="#">
+                <li class="main-footer__nav-item footer-site__item">
+                  <a class="main-footer__nav-link footer-site__link" href="#">
                     Доставка
                   </a>
                 </li>
-                <li class="footer-site__item">
-                  <a class="footer-site__link" href="#">
+                <li class="main-footer__nav-item footer-site__item">
+                  <a class="main-footer__nav-link footer-site__link" href="#">
                     Способы оплаты
                   </a>
                 </li>
-                <li class="footer-site__item">
-                  <a class="footer-site__link" href="#">
+                <li class="main-footer__nav-item footer-site__item">
+                  <a class="main-footer__nav-link footer-site__link" href="#">
                     О нас
                   </a>
                 </li>
               </ul>
             </div>
             <div class="main-footer__nav footer-media">
-              <p class="footer-media__badge badge">
+              <p class="main-footer__nav-badge footer-media__badge badge">
                 Медиа
               </p>
-              <ul class="footer-media__list">
-                <li class="footer-media__item">
-                  <a class="footer-media__link" href="#">
+              <ul class="main-footer__nav-list footer-media__list">
+                <li class="main-footer__nav-item footer-media__item">
+                  <a class="main-footer__nav-link footer-media__link" href="#">
                     Блог
                   </a>
                 </li>
-                <li class="footer-media__item">
-                  <a class="footer-media__link" href="#">
+                <li class="main-footer__nav-item footer-media__item">
+                  <a class="main-footer__nav-link footer-media__link" href="#">
                     Информация для СМИ
                   </a>
                 </li>
-                <li class="footer-media__item">
-                  <a class="footer-media__link" href="#">
+                <li class="main-footer__nav-item main-footer__nav-item footer-media__item">
+                  <a class="main-footer__nav-link footer-media__link" href="#">
                     Правовая информация
                   </a>
                 </li>
               </ul>
             </div>
-            <div class="main-footer__contacts contacts">
-              <p class="contacts__badge badge">
+            <div class="main-footer__nav main-footer__contacts contacts">
+              <p class="main-footer__nav-badge contacts__badge badge">
                 Контакты
               </p>
               <p class="contacts__text contacts__text--address">

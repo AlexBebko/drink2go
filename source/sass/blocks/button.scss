@@ -8,5 +8,10 @@
     background-color: $btn-color-main;
     color: $text-color-btn-main;
   }
+
+  &--secondary {
+    background-color: $btn-color-second;
+    color: $text-color-btn-second;
+  }
 }
 

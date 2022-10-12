@@ -1,3 +1,7 @@
+.form__wrapper {
+  margin-bottom: 36px;
+}
+
 .form__fieldset-wrapper {
   display: flex;
   flex-direction: column;
@@ -138,6 +142,7 @@
 .form__check[type="checkbox"]:disabled + .form__mark--check {
   background-color: #e2e2e2;
   border-color: #e2e2e2;
+  cursor: text;
 
   &::before,
   &::after {
@@ -155,11 +160,13 @@
 .form__radio:disabled ~ .form__label,
 .form__check:disabled ~ .form__label {
   color: #bdbdbd;
+  cursor: text;
 }
 
 .form__radio[type="radio"]:disabled + .form__mark--radio {
   border-color: #e2e2e2;
   background-color: transparent;
+  cursor: text;
 
   &::before,
   &::after {
@@ -184,6 +191,16 @@
   margin-bottom: 24.5px;
 }
 
+.form__button {
+  width: 160px;
+  padding-top: 10.5px;
+  padding-bottom: 10.5px;
+
+  &--submit {
+    margin-bottom: 24.5px;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .form__wrapper {
     display: flex;
@@ -192,12 +209,89 @@
 
   .form__container {
     display: flex;
-    margin: 0 auto;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  .form__legend {
+    margin-bottom: 20px;
+  }
+
+  .form__range {
+    width: 225px;
+    margin-right: 21px;
+  }
+
+  .form__field {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--radio {
+      margin-right: 39px;
+    }
+  }
+
+  .form__button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form__button {
+    width: 148px;
+
+    @include text-size(400, 14px, 24px);
+
+    &:first-child {
+      margin: 0;
+      margin-right: 30px;
+    }
+
+    &--submit {
+      padding: 8px 3.5px;
+    }
+
+    &--reset {
+      width: 138px;
+      padding: 8px 5.5px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .form__container {
     flex-direction: column;
+  }
+
+  .form__fieldset {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 40px;
+    }
+  }
+
+  .form__range {
+    width: 100%;
+    margin: 0;
+  }
+
+  .form__button {
+    width: 150px;
+
+    &:first-child {
+      margin: 0;
+      margin-right: 18px;
+    }
+
+    &--submit {
+      padding: 8px 4.5px;
+    }
+
+    &--reset {
+      padding: 8px 11.5px;
+    }
   }
 }

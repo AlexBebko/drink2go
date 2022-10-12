@@ -1,11 +1,30 @@
 .product-card {
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  padding-top: 40px;
+  background-color: $bg-color-main;
+}
+
+
+.product-card__link {
+  text-decoration: none;
 }
 
 .product-card__image {
   margin: 0 auto;
+}
+
+.product-card__title {
+  text-align: start;
+  color: $text-color-main;
+
+  @include text-size(700, 18px, 32px);
+}
+
+.product-card__description {
+  text-align: start;
+
+  @include text-size(400, 14px, 20px);
 }
 
 .product-card__button-wrapper {
@@ -13,4 +32,40 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.product-card__price {
+  @include text-size(600, 20px, 32px);
+}
+
+.product-card__button {
+  position: relative;
+  display: block;
+  width: 141px;
+  padding: 8px 20px;
+  padding-left: 46px;
+
+  @include text-size(400, 14px, 20px);
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 16px;
+    top: 10px;
+    left: 20px;
+    background-image: url("../img/basket-button.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .product-card {
+    margin-bottom: 0;
+    padding: 30px;
+    padding-top: 50px;
+  }
+
+  .product-card__title {
+    @include text-size(700, 24px, 36px);
+  }
 }

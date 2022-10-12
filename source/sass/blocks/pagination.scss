@@ -1,10 +1,83 @@
-.pagination {
+.pagination__list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .pagination__button {
-  text-decoration: none;
+  position: relative;
   padding: 8px;
+  min-width: 40px;
+  min-height: 40px;
+
+  @include text-size(400, 16px, 24px);
+
+  &--active {
+    font-weight: 600;
+    background-color: transparent;
+    color: #333333;
+  }
+
+  &--back {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 16px;
+      background-image: url("../../img/dropdown.svg");
+      background-repeat: no-repeat;
+      transform: translate(-100%, -50%) rotate(90deg);
+    }
+  }
+
+  &--forward {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 16px;
+      background-image: url("../../img/dropdown.svg");
+      background-repeat: no-repeat;
+      transform: translate(0, -50%) rotate(-90deg);
+    }
+  }
+
+
+  &--text {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .pagination__list {
+    justify-content: flex-end;
+  }
+
+  .pagination__item {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .pagination__button {
+    &--back,
+    &--forward {
+      &::before {
+        display: none;
+      }
+    }
+
+    &--text {
+      display: inline;
+      padding: 8px 20px;
+    }
+  }
 }
