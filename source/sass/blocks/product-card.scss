@@ -3,6 +3,7 @@
   padding: 20px;
   padding-top: 40px;
   background-color: $bg-color-main;
+  border-radius: 4px;
 }
 
 
@@ -63,6 +64,16 @@
     margin-bottom: 0;
     padding: 30px;
     padding-top: 50px;
+
+    &:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    &:focus,
+    &:focus-within {
+      outline: none;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
   }
 
   .product-card__title {

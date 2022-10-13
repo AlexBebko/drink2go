@@ -3,40 +3,96 @@
   width: auto;
 }
 
+.main-nav__wrapper {
+  margin-right: -20px;
+}
+
 .main-nav__list {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.main-nav__toggle {
-  position: absolute;
-  padding: 0;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  display: block;
-  width: 60px;
-  min-height: 60px;
-  background-color: #ffffff;
-  cursor: pointer;
-  border: none;
-}
 
-.main-nav__toggle::before {
-  content: "";
-  position: absolute;
-  top: 25px;
-  left: 22px;
-  width: 16px;
-  height: 1.5px;
-  background-color: #000000;
-  box-shadow: 0 5.25px 0 0 #000000, 0 10.5px 0 0 #000000;
+@media (max-width: $mobile-width) {
+  .main-nav__toggle {
+    position: absolute;
+    padding: 0;
+    top: 0;
+    right: -20px;
+    z-index: 2;
+    display: block;
+    width: 60px;
+    min-height: 60px;
+    background-color: #ffffff;
+    cursor: pointer;
+    border: none;
+  }
+
+  .main-nav__site-list--closed ~ .main-nav__toggle::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 22px;
+    width: 16px;
+    height: 1.5px;
+    background-color: #000000;
+    box-shadow: 0 5.25px 0 0 #000000, 0 10.5px 0 0 #000000;
+  }
+
+  .main-nav__site-list--closed {
+    display: none;
+  }
+
+  .main-nav__site-list--opened {
+    position: absolute;
+    background-color: $bg-color-main;
+    top: 60px;
+    left: -140px;
+    width: 320px;
+  }
+
+  .main-nav__site-list--opened ~ .main-nav__toggle {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 22px;
+      width: 17px;
+      height: 1.5px;
+      background-color: #000000;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .main-nav__site-list--nojs ~ .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__site-list--nojs {
+    position: sticky;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .main-nav {
     display: flex;
+  }
+
+  .main-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
   }
 
   .main-nav__toggle {

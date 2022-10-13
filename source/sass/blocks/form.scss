@@ -48,15 +48,15 @@
   &--radio {
     width: 24px;
     height: 24px;
-    background-color: #ffffff;
-    border: 2px solid #bdbdbd;
+    background-color: $bg-color-main;
+    border: 2px solid $btn-color-disabled;
     border-radius: 50%;
   }
 
   &--check {
     width: 42px;
     height: 24px;
-    background-color: #bdbdbd;
+    background-color: $btn-color-disabled;
     border-radius: 12px;
 
     &::before,
@@ -65,7 +65,7 @@
       content: "";
       width: 20px;
       height: 20px;
-      background-color: #ffffff;
+      background-color: $bg-color-main;
       border-radius: 50%;
       top: 50%;
       left: 2px;
@@ -74,10 +74,27 @@
   }
 }
 
-.form__field--radio:hover .form__mark--radio,
+.form__field--radio:hover .form__mark--radio {
+  border-color: $btn-color-hover;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgba(120, 89, 207, 0.25);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
 .form__field--radio:focus .form__mark--radio,
 .form__field--radio:focus-within .form__mark--radio {
-  border-color: #9070ec;
+  border-color: $btn-color-hover;
 
   &::before,
   &::after {
@@ -94,6 +111,8 @@
 }
 
 .form__radio[type="radio"]:checked + .form__mark--radio {
+  border-color: $btn-color-main;
+
   &::before,
   &::after {
     position: absolute;
@@ -101,18 +120,27 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background-color: #7859cf;
+    background-color: $btn-color-main;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 }
 
-.form__field--check:hover .form__mark--check,
+.form__field--check:hover .form__mark--check {
+  background-color: rgba(120, 89, 207, 0.25);
+  border: 2px solid $btn-color-hover;
+
+  &::before,
+  &::after {
+    left: 0;
+  }
+}
+
 .form__field--check:focus .form__mark--check,
 .form__field--check:focus-within .form__mark--check {
   background-color: rgba(120, 89, 207, 0.25);
-  border: 2px solid #9070ec;
+  border: 2px solid $btn-color-hover;
 
   &::before,
   &::after {
@@ -121,7 +149,7 @@
 }
 
 .form__check[type="checkbox"]:checked + .form__mark--check {
-  background-color: #7859cf;
+  background-color: $btn-color-main;
   border: none;
 
   &::before,
@@ -131,7 +159,7 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: $bg-color-main;
     top: 50%;
     left: 20px;
     transform: translateY(-50%);
@@ -140,31 +168,31 @@
 
 
 .form__check[type="checkbox"]:disabled + .form__mark--check {
-  background-color: #e2e2e2;
-  border-color: #e2e2e2;
+  background-color: $btn-color-light-disabled;
+  border-color: $btn-color-light-disabled;
   cursor: text;
 
   &::before,
   &::after {
-    background-color: #f8f8f8;
+    background-color: $bg-color-second;
   }
 }
 
 .form__check[type="checkbox"]:disabled:checked + .form__mark--check {
   &::before,
   &::after {
-    background-color: #bdbdbd;
+    background-color: $btn-color-disabled;
   }
 }
 
 .form__radio:disabled ~ .form__label,
 .form__check:disabled ~ .form__label {
-  color: #bdbdbd;
+  color: $btn-color-disabled;
   cursor: text;
 }
 
 .form__radio[type="radio"]:disabled + .form__mark--radio {
-  border-color: #e2e2e2;
+  border-color: $btn-color-light-disabled;
   background-color: transparent;
   cursor: text;
 
@@ -175,13 +203,13 @@
 }
 
 .form__radio[type="radio"]:disabled:checked + .form__mark--radio {
-  border-color: #e2e2e2;
+  border-color: $btn-color-light-disabled;
   background-color: transparent;
 
   &::before,
   &::after {
     display: block;
-    background-color: #e2e2e2;
+    background-color: $btn-color-light-disabled;
   }
 }
 
@@ -198,6 +226,17 @@
 
   &--submit {
     margin-bottom: 24.5px;
+
+    &:disabled {
+      background-color: $btn-color-disabled;
+    }
+  }
+
+  &--reset {
+    &:disabled {
+      background-color: $btn-color-light-disabled;
+      color: $btn-color-second;
+    }
   }
 }
 

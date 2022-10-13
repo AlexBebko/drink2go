@@ -1,5 +1,4 @@
 .site-list {
-  display: none;
   position: absolute;
   background-color: $bg-color-main;
   top: 60px;
@@ -11,16 +10,19 @@
   min-height: 57px;
   border: 1px solid #f0ebff;
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 22px;
+
+  &:active {
+    background-color: #f0ebff;
+  }
 }
 
 .site-list__link {
-  width: 320px;
   text-decoration: none;
   text-transform: uppercase;
   color: $text-color-main;
-  padding-top: 20px;
-  padding-bottom: 21px;
-
+  padding: 20px 100px;
 
   @include text-size(500, 12px, 16px);
 }
@@ -31,10 +33,48 @@
     position: static;
     width: 400px;
   }
+
+  .site-list__item {
+    border: none;
+    padding-top: 32px;
+
+    &--current {
+      border-bottom: 2px solid #7859cf;
+    }
+  }
+
+  .site-list__item--current .site-list__link {
+    color: $text-color-badge;
+  }
+
+  .site-list__item .site-list__link {
+    &:hover {
+      color: $text-color-badge;
+    }
+
+    &:focus,
+    &:focus-within {
+      outline: none;
+      color: $text-color-badge;
+    }
+
+    &:active {
+      background-color: #f0ebff;
+    }
+  }
+
+  .site-list__link {
+    padding: 32px 20px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .site-list {
-    width: 540px;
+    width: 600px;
+    justify-content: center;
+  }
+
+  .site-list__item {
+    margin-right: 20px;
   }
 }

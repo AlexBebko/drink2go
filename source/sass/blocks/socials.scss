@@ -9,7 +9,33 @@
 }
 
 .socials__item {
+  position: relative;
   text-align: center;
+}
+
+.socials__link {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
   padding: 10px;
+  border-radius: 4px;
+  color: $text-color-transparent;
+
+  &:hover {
+    color: $btn-color-main;
+    background-color: $bg-color-active;
+  }
+
+  &:focus,
+  &:focus-within {
+    outline: none;
+    color: $btn-color-main;
+    background-color: $bg-color-active;
+  }
+
+  &:active {
+    background-color: rgba(120, 89, 207, 0.25);
+  }
 }
 

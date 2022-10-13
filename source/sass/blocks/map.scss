@@ -1,0 +1,23 @@
+.map {
+  width: 320px;
+  height: 420px;
+  margin: 0 auto;
+  background-image: url("../../img/map_mobile.png");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: $tablet-width) {
+  .map {
+    width: 768px;
+    height: 480px;
+    background-image: url("../../img/map-tablet.png");
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map {
+    width: 1440px;
+    height: 540px;
+    background-image: url("../../img/map-desktop.png");
+  }
+}

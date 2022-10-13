@@ -1,7 +1,29 @@
 .contacts__text {
+  position: relative;
   margin: 0;
   padding-left: 19px;
   margin-bottom: 16px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 0;
+    width: 13px;
+    height: 16px;
+  }
+
+  &--address {
+    &::before {
+      background-image: url("../img/address-icon.svg");
+    }
+  }
+
+  &--phone {
+    &::before {
+      background-image: url("../img/phone-icon.svg");
+    }
+  }
 
   &:last-child {
     margin-bottom: 0;

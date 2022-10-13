@@ -3,6 +3,7 @@
   border: none;
   border-radius: 4px;
   padding: 8px 20px;
+  cursor: pointer;
 
   &--primary {
     background-color: $btn-color-main;
@@ -12,6 +13,23 @@
   &--secondary {
     background-color: $btn-color-second;
     color: $text-color-btn-second;
+  }
+
+  &:hover {
+    background-color: $btn-color-hover;
+    color: $text-color-btn-main;
+  }
+
+  &:focus,
+  &:focus-within {
+    outline: none;
+    background-color: $btn-color-hover;
+    color: $text-color-btn-main;
+  }
+
+  &:active {
+    background-color: $btn-color-active;
+    color: $text-color-btn-main;
   }
 }
 

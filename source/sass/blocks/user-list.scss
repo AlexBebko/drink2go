@@ -8,6 +8,11 @@
 .user-list__item {
   list-style: none;
   padding: 22px;
+  color: $text-color-main;
+
+  &:active {
+    background-color: $bg-color-active;
+  }
 }
 
 .user-list__link {
@@ -16,8 +21,64 @@
   line-height: 0;
   width: 16px;
   height: 16px;
+  color: $text-color-main;
 }
 
 .user-list__text {
   display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .user-list {
+    width: 180px;
+    margin-right: 0;
+    justify-content: flex-end;
+  }
+
+  .user-list__item {
+    padding: 32px 22px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-list {
+    width: 410px;
+  }
+
+  .user-list__item {
+    padding: 32px 20px;
+  }
+
+  .user-list__item .user-list__link {
+    &:hover {
+      color: $text-color-badge;
+      fill: $text-color-badge;
+    }
+
+    &:focus,
+    &:focus-within {
+      outline: none;
+      color: $text-color-badge;
+      fill: $text-color-badge;
+    }
+  }
+
+  .user-list__link {
+    padding: 32px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $text-color-main;
+
+    @include text-size(500, 12px, 16px);
+  }
+
+  .user-list__icon {
+    vertical-align: middle;
+  }
+
+  .user-list__text {
+    display: inline-block;
+    padding-left: 8px;
+    vertical-align: middle;
+  }
 }
