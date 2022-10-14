@@ -5,6 +5,7 @@
 
 .slider__wrapper {
   width: 320px;
+  height: 656px;
   margin: 0 auto;
 }
 
@@ -12,11 +13,74 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
 }
 
 .slider__button {
-  display: none;
+  position: absolute;
+  top: 22px;
+  width: 20px;
+  height: 656px;
+  background-color: transparent;
+  border: none;
+
+  &--prev {
+    left: 0;
+
+    &:hover {
+      background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:focus,
+    &:focus-within {
+      outline: none;
+      background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:active {
+      background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      left: 4px;
+      background-image: url("../../img/arrow-back.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--next {
+    right: 0;
+
+    &:hover {
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%,);
+    }
+
+    &:focus,
+    &:focus-within {
+      outline: none;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%,);
+    }
+
+    &:active {
+      background: linear-gradient(90deg, rgba(120, 89, 207, 0) 0%, rgba(120, 89, 207, 0.25) 100%);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      right: 4px;
+      background-image: url("../../img/arrow-forward.svg");
+      background-repeat: no-repeat;
+    }
+  }
 }
+
 
 .slider__toggles {
   display: none;
@@ -25,6 +89,24 @@
 @media (min-width: $tablet-width) {
   .slider__wrapper {
     width: 768px;
+    height: 828px;
+  }
+
+  .slider__button {
+    width: 80px;
+    height: 828px;
+
+    &--prev {
+      &::after {
+        left: 34px;
+      }
+    }
+
+    &--next {
+      &::after {
+        right: 34px;
+      }
+    }
   }
 }
 
@@ -34,6 +116,6 @@
   }
 
   .slider__toggles {
-    // display: block;
+    display: block;
   }
 }

@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" crossorigin=""/>
     <title>Drink2Go</title>
     <link rel="preload" href="fonts/Montserrat-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -50,7 +52,9 @@
               </li>
             </ul>
             <button class="main-nav__toggle">
-              <span class="visually-hidden">Открыть меню</span>
+              <span class="visually-hidden">
+                Открыть меню
+              </span>
             </button>
             <ul class="main-nav__list user-list">
               <li class="user-list__item">
@@ -58,7 +62,9 @@
                   <svg class="user-list__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10.667 4a2.667 2.667 0 1 1-5.334 0 2.667 2.667 0 0 1 5.334 0ZM12 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-8.803 8.31C4.437 11.277 6.16 10.667 8 10.667s3.564.61 4.803 1.643c1.232 1.027 1.864 2.362 1.864 3.69H16c0-1.768-.843-3.464-2.343-4.714-1.5-1.25-3.535-1.953-5.657-1.953s-4.157.703-5.657 1.953S0 14.232 0 16h1.333c0-1.328.632-2.663 1.864-3.69Z" fill="currentColor"/>
                   </svg>
-                  <span class="user-list__text">Войти</span>
+                  <span class="user-list__text">
+                    Войти
+                  </span>
                 </a>
               </li>
               <li class="user-list__item">
@@ -66,7 +72,9 @@
                   <svg class="user-list__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="m5.66 3.875.234 2.792h4.213l.232-2.792a2.347 2.347 0 1 0-4.678 0Zm5.784 2.792.224-2.68a3.68 3.68 0 1 0-7.336 0l.224 2.68H0L.19 8l.816 5.71A2.667 2.667 0 0 0 3.646 16h8.708a2.667 2.667 0 0 0 2.64-2.29L15.81 8 16 6.667h-4.556ZM11.334 8h-.054l-.222 2.667h3.024L14.462 8h-3.129ZM9.941 8H6.058l.222 2.667h3.44L9.942 8ZM4.72 8H1.537l.381 2.667h3.024L4.72 8Zm1.893 6.667L6.391 12H9.61l-.222 2.667H6.613ZM10.947 12l-.222 2.667h1.629c.663 0 1.226-.488 1.32-1.145L13.89 12h-2.944Zm-5.894 0 .222 2.667H3.646a1.333 1.333 0 0 1-1.32-1.145L2.11 12h2.944Z" fill="currentColor"/>
                   </svg>
-                  <span class="user-list__text">Корзина</span>
+                  <span class="user-list__text">
+                    Корзина
+                  </span>
                 </a>
               </li>
             </ul>
@@ -79,12 +87,12 @@
         Интернет-магазин кофейных напитков Drink2Go
       </h1>
       <section class="slider">
-        <div class="slider__wrapper">
+        <div class="slider__wrapper swiper">
           <h2 class="visually-hidden">
             Новинки магазина
           </h2>
-          <ul class="slider__list">
-            <li class="slider__item slide slide--active slide--flat-white">
+          <ul class="slider__list swiper-wrapper">
+            <li class="slider__item slide slide--flat-white swiper-slide">
               <p class="slide__badge badge">
                 Новинка!
               </p>
@@ -104,7 +112,7 @@
                 <a class="slide__button button button--primary" href="#">Заказать</a>
               </div>
             </li>
-            <li class="slider__item slide slide--lavender">
+            <li class="slider__item slide slide--lavender swiper-slide">
               <p class="slide__badge badge">
                 Новинка!
               </p>
@@ -114,15 +122,17 @@
               <p class="slide__description">
                 Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
               </p>
-              <span class="slide__old-price">
-                285₽
-              </span>
-              <span class="slide__new-price">
-                265₽
-              </span>
-              <a class="slide__button button button--primary" href="#">Заказать</a>
-            </li>
-            <li class="slider__item slide slide--espresso">
+              <div class="slide__button-wrapper">
+                <span class="slide__old-price">
+                  285₽
+                </span>
+                <span class="slide__new-price">
+                  265₽
+                </span>
+                <a class="slide__button button button--primary" href="#">Заказать</a>
+              </div>
+              </li>
+            <li class="slider__item slide slide--espresso swiper-slide">
               <p class="slide__badge badge">
                 Новинка!
               </p>
@@ -132,22 +142,29 @@
               <p class="slide__description">
                 Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость
               </p>
-              <span class="slide__old-price">
-                395₽
-              </span>
-              <p class="slide__new-price">
-                375₽
-              </p>
-              <a class="slide__button button button--primary" href="#">Заказать</a>
-            </li>
+              <div class="slide__button-wrapper">
+                <span class="slide__old-price">
+                  395₽
+                </span>
+                <p class="slide__new-price">
+                  375₽
+                </p>
+                <a class="slide__button button button--primary" href="#">Заказать</a>
+              </div>
+              </li>
           </ul>
-          <button class="slider__button slider__button--back">Кнопка назад</button>
-          <button class="slider__button slider__button--forward">Кнопка вперед</button>
-          <p class="slider__toggles">
-            <button class="slider__toggle slider__toggle--current" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
-          </p>
+          <button class="slider__button slider__button--prev swiper-button-prev" type="button">
+            <span class="visually-hidden">
+              Кнопка - предыдущий слайд
+            </span>
+            </button>
+          <button class="slider__button slider__button--next swiper-button-next" type="button">
+            <span class="visually-hidden">
+              Кнопка - следующий слайд
+            </span>
+          </button>
+          <div class="slider__toggles swiper-pagination">
+          </div>
         </div>
       </section>
       <section class="benefits">
@@ -464,8 +481,7 @@
         </div>
       </section>
       <section class="map">
-        <div class="map__frame">
-        </div>
+        <div class="map__wrapper" id="map"></div>
       </section>
     </main>
     <footer class="main-footer">
@@ -591,6 +607,12 @@
         </div>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" crossorigin=""></script>
+
+    <script src="js/burger-menu.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/leaflet.js"></script>
   </body>
 </html>

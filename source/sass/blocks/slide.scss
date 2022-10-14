@@ -1,11 +1,11 @@
 .slide {
-  display: none;
+  display: block;
   text-align: center;
   padding: 310px 20px 60px 20px;
 
-  &--active {
-    display: block;
-  }
+  // &--active {
+  //   // display: block;
+  // }
 
   &--flat-white {
     background-image: url("../img/flat-white-mobile.png");

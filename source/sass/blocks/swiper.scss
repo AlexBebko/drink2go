@@ -1,0 +1,31 @@
+.swiper-pagination-bullet {
+  width: 62px;
+  height: 4px;
+  border-radius: 0;
+  background-color: $bg-color-main;
+  opacity: 1;
+  margin-right: 8px;
+
+  &:hover {
+    background-color: rgba(120, 89, 207, 0.25);
+  }
+
+  &:focus,
+  &:focus-within {
+    outline: none;
+    background-color: rgba(120, 89, 207, 0.25);
+  }
+
+  &:active {
+    background-color: $btn-color-main;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $btn-color-main;
+
+  &:focus,
+  &:focus-within {
+    background-color: $btn-color-main;
+  }
+}

@@ -14,9 +14,15 @@
 }
 
 .main-header__logo {
+  display: block;
   width: 32px;
   height: 36px;
   margin: 0;
+}
+
+.main-header__logo img {
+  width: inherit;
+  height: inherit;
 }
 
 .main-header__logo-text {
