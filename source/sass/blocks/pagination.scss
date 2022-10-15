@@ -27,35 +27,6 @@
     color: $btn-color-second;
   }
 
-  // &--back {
-  //   &::before {
-  //     position: absolute;
-  //     content: "";
-  //     top: 50%;
-  //     left: 50%;
-  //     width: 10px;
-  //     height: 16px;
-  //     background-image: url("../../img/dropdown.svg");
-  //     background-repeat: no-repeat;
-  //     transform: translate(-100%, -50%) rotate(90deg);
-  //   }
-  // }
-
-  // &--forward {
-  //   &::before {
-  //     position: absolute;
-  //     content: "";
-  //     top: 50%;
-  //     left: 50%;
-  //     width: 10px;
-  //     height: 16px;
-  //     background-image: url("../../img/dropdown.svg");
-  //     background-repeat: no-repeat;
-  //     transform: translate(0, -50%) rotate(-90deg);
-  //   }
-  // }
-
-
   &--text {
     display: none;
   }

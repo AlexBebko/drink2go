@@ -2,7 +2,7 @@ const map = L.map('map')
   .setView({
     lat: 59.96831,
     lng: 30.31748,
-  }, 16);
+  }, 20);
 
 L.tileLayer(
   'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',

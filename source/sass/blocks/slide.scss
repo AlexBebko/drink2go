@@ -3,15 +3,16 @@
   text-align: center;
   padding: 310px 20px 60px 20px;
 
-  // &--active {
-  //   // display: block;
-  // }
-
   &--flat-white {
     background-image: url("../img/flat-white-mobile.png");
     background-repeat: no-repeat;
     background-position: center 20px;
     background-color: $bg-color-slide-flat-white;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/flat-white-mobile@2x.png");
+      background-size: 280px 280px;
+    }
   }
 
   &--lavender {
@@ -19,6 +20,11 @@
     background-repeat: no-repeat;
     background-position: center 20px;
     background-color: $bg-color-slide-lavender;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/lavender-mobile@2x.png");
+      background-size: 280px 280px;
+    }
   }
 
   &--espresso {
@@ -26,6 +32,11 @@
     background-repeat: no-repeat;
     background-position: center 20px;
     background-color: $bg-color-slide-espresso;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/espresso-mobile@2x.png");
+      background-size: 280px 280px;
+    }
   }
 }
 
@@ -83,23 +94,41 @@
 
     &--flat-white {
       background: url("../img/flat-white-tablet.png"),
-        linear-gradient($bg-color-slide-flat-white 70%, #ffffff 70%);
+        linear-gradient($bg-color-slide-flat-white 77%, #ffffff 77%);
       background-repeat: no-repeat;
       background-position: bottom;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/flat-white-tablet@2x.png"),
+          linear-gradient($bg-color-slide-flat-white 77%, #ffffff 77%);
+        background-size: 476px 476px, 100% 100%;
+      }
     }
 
     &--lavender {
       background: url("../img/lavender-tablet.png"),
-        linear-gradient($bg-color-slide-lavender 70%, #ffffff 70%);
+        linear-gradient($bg-color-slide-lavender 77%, #ffffff 77%);
       background-repeat: no-repeat;
       background-position: bottom;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/lavender-tablet@2x.png"),
+          linear-gradient($bg-color-slide-lavender 77%, #ffffff 77%);
+        background-size: 476px 476px, 100% 100%;
+      }
     }
 
     &--espresso {
       background: url("../img/espresso-tablet.png"),
-        linear-gradient($bg-color-slide-espresso 70%, #ffffff 70%);
+        linear-gradient($bg-color-slide-espresso 77%, #ffffff 77%);
       background-repeat: no-repeat;
       background-position: bottom;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/espresso-tablet@2x.png"),
+          linear-gradient($bg-color-slide-espresso 77%, #ffffff 77%);
+        background-size: 476px 476px, 100% 100%;
+      }
     }
   }
 
@@ -126,6 +155,14 @@
         $bg-color-slide-flat-white;
       background-repeat: no-repeat;
       background-position: 105px 30px;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/flat-white-desktop@2x.png"),
+          $bg-color-slide-flat-white;
+        background-size: 600px 600px, 100% 100%;
+        background-repeat: no-repeat;
+        background-position: 105px 30px;
+      }
     }
 
     &--lavender {
@@ -133,6 +170,14 @@
         $bg-color-slide-lavender;
       background-repeat: no-repeat;
       background-position: 105px 30px;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/lavender-desktop@2x.png"),
+          $bg-color-slide-lavender;
+        background-size: 600px 600px, 100% 100%;
+        background-repeat: no-repeat;
+        background-position: 105px 30px;
+      }
     }
 
     &--espresso {
@@ -140,6 +185,14 @@
         $bg-color-slide-espresso;
       background-repeat: no-repeat;
       background-position: 105px 30px;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/espresso-desktop@2x.png"),
+          $bg-color-slide-espresso;
+        background-size: 600px 600px, 100% 100%;
+        background-repeat: no-repeat;
+        background-position: 105px 30px;
+      }
     }
   }
 

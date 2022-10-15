@@ -521,10 +521,16 @@ img {
 @media (min-width: 1440px) {
   .slider__wrapper {
     width: 1440px;
+    height: 714px;
+  }
+
+  .slider__button {
+    height: 714px;
   }
 
   .slider__toggles {
     display: block;
+    margin-bottom: 60px;
   }
 }
 .slide {
@@ -538,17 +544,35 @@ img {
   background-position: center 20px;
   background-color: #f3ebe1;
 }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .slide--flat-white {
+    background-image: url("../img/flat-white-mobile@2x.png");
+    background-size: 280px 280px;
+  }
+}
 .slide--lavender {
   background-image: url("../img/lavender-mobile.png");
   background-repeat: no-repeat;
   background-position: center 20px;
   background-color: #eae6fc;
 }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .slide--lavender {
+    background-image: url("../img/lavender-mobile@2x.png");
+    background-size: 280px 280px;
+  }
+}
 .slide--espresso {
   background-image: url("../img/espresso-mobile.png");
   background-repeat: no-repeat;
   background-position: center 20px;
   background-color: #e5e6e8;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .slide--espresso {
+    background-image: url("../img/espresso-mobile@2x.png");
+    background-size: 280px 280px;
+  }
 }
 
 .slide__badge {
@@ -610,27 +634,51 @@ img {
     padding: 60px 40px 496px 40px;
   }
   .slide--flat-white {
-    background: url("../img/flat-white-tablet.png"), linear-gradient(#f3ebe1 70%, #ffffff 70%);
+    background: url("../img/flat-white-tablet.png"), linear-gradient(#f3ebe1 77%, #ffffff 77%);
     background-repeat: no-repeat;
     background-position: bottom;
   }
+}
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+  .slide--flat-white {
+    background-image: url("../img/flat-white-tablet@2x.png"), linear-gradient(#f3ebe1 77%, #ffffff 77%);
+    background-size: 476px 476px, 100% 100%;
+  }
+}
+@media (min-width: 768px) {
   .slide--lavender {
-    background: url("../img/lavender-tablet.png"), linear-gradient(#eae6fc 70%, #ffffff 70%);
+    background: url("../img/lavender-tablet.png"), linear-gradient(#eae6fc 77%, #ffffff 77%);
     background-repeat: no-repeat;
     background-position: bottom;
   }
+}
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+  .slide--lavender {
+    background-image: url("../img/lavender-tablet@2x.png"), linear-gradient(#eae6fc 77%, #ffffff 77%);
+    background-size: 476px 476px, 100% 100%;
+  }
+}
+@media (min-width: 768px) {
   .slide--espresso {
-    background: url("../img/espresso-tablet.png"), linear-gradient(#e5e6e8 70%, #ffffff 70%);
+    background: url("../img/espresso-tablet.png"), linear-gradient(#e5e6e8 77%, #ffffff 77%);
     background-repeat: no-repeat;
     background-position: bottom;
   }
-
+}
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+  .slide--espresso {
+    background-image: url("../img/espresso-tablet@2x.png"), linear-gradient(#e5e6e8 77%, #ffffff 77%);
+    background-size: 476px 476px, 100% 100%;
+  }
+}
+@media (min-width: 768px) {
   .slide__title {
     font-weight: 700;
     font-size: 56px;
     line-height: 80px;
   }
-
+}
+@media (min-width: 768px) {
   .slide__description {
     width: 608px;
     margin-left: 60px;
@@ -650,23 +698,53 @@ img {
     background-repeat: no-repeat;
     background-position: 105px 30px;
   }
+}
+@media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1440px) and (min-resolution: 2dppx) {
+  .slide--flat-white {
+    background: url("../img/flat-white-desktop@2x.png"), #f3ebe1;
+    background-size: 600px 600px, 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 105px 30px;
+  }
+}
+@media (min-width: 1440px) {
   .slide--lavender {
     background: url("../img/lavender-desktop.png"), #eae6fc;
     background-repeat: no-repeat;
     background-position: 105px 30px;
   }
+}
+@media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1440px) and (min-resolution: 2dppx) {
+  .slide--lavender {
+    background: url("../img/lavender-desktop@2x.png"), #eae6fc;
+    background-size: 600px 600px, 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 105px 30px;
+  }
+}
+@media (min-width: 1440px) {
   .slide--espresso {
     background: url("../img/espresso-desktop.png"), #e5e6e8;
     background-repeat: no-repeat;
     background-position: 105px 30px;
   }
-
+}
+@media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1440px) and (min-resolution: 2dppx) {
+  .slide--espresso {
+    background: url("../img/espresso-desktop@2x.png"), #e5e6e8;
+    background-size: 600px 600px, 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 105px 30px;
+  }
+}
+@media (min-width: 1440px) {
   .slide__description {
     margin: 0;
     margin-top: 16px;
     margin-bottom: 40px;
   }
-
+}
+@media (min-width: 1440px) {
   .slide__button-wrapper {
     justify-content: flex-start;
   }
@@ -1393,6 +1471,15 @@ img {
   background-color: #bdbdbd;
 }
 
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 @media (min-width: 768px) {
   .range__container {
     width: 240px;
@@ -1744,6 +1831,10 @@ img {
     grid-template-columns: 318px 1012px;
     gap: 30px;
   }
+
+  .main-footer__nav {
+    padding-top: 9px;
+  }
 }
 .socials__list {
   margin: 0;
@@ -1787,6 +1878,8 @@ img {
   margin: 0;
   padding-left: 19px;
   margin-bottom: 16px;
+  color: #333333;
+  text-decoration: none;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;

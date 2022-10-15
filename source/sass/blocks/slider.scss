@@ -113,9 +113,15 @@
 @media (min-width: $desktop-width) {
   .slider__wrapper {
     width: 1440px;
+    height: 714px;
+  }
+
+  .slider__button {
+    height: 714px;
   }
 
   .slider__toggles {
     display: block;
+    margin-bottom: 60px;
   }
 }
